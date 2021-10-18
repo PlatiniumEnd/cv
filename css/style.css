@@ -1,0 +1,321 @@
+/* mise en page header
+
+Rajouter mon numéro de téléphone ?
+Ajouter un language version english ??*/
+
+
+/*Mise en page*/
+
+.main
+{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-left:15%;
+    margin-right:15%;
+
+}
+
+
+
+body {
+    font-family: 'Poppins'; 
+    background: linear-gradient(-45deg, #dc7f74, #2b1a3b, #834666, #35bece, #6e69a9);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+img{
+    width: 100px 
+}
+
+/*header*/
+
+.bienvenue
+{
+    font-size: 15px;
+    font-style: italic;
+}
+
+hr {
+    color:#97d0ee
+}
+
+/*menu déroulant*/
+
+nav{
+    width: 100%;
+    margin: 0px auto 40px auto;
+    background-color: #daf2fc;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block; 
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: #eeb597;
+    border-bottom: 2px solid #97d0ee;
+}
+
+/*sous menus*/
+
+.sous{
+    display: none;
+    background-color: #daf2fc;
+    width: 100%;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    width: 100%;
+    text-align: center;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+/*fin du menu déroulant*/
+
+.titre_du_cv
+{
+    font-size: 50px;
+    margin-top: 0.3em;
+}
+
+.photo_de_profil
+{
+    border-radius: 50%;
+    width: 200px;
+}
+
+
+.logo {
+    font-size: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+
+.presentation {
+    font-size: 20px;
+    padding: 20px;
+}
+/*corps du site*/
+
+/*réglage du grid*/
+
+
+
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    row-gap: 10px;
+}
+
+/*grid base*/
+
+/*formations*/
+
+.mes_formations
+{
+    grid-column: 1/3;
+    grid-row: 1;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.logo_ecole
+{
+    width: 200px;
+}
+
+.formations
+{
+    height: 200px;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 5px;
+}
+.formations h5
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+}
+.formations p
+{
+    font-style: italic;
+}
+.images_formations
+{
+    margin-right: 20px;
+    height: 205px
+}
+
+/*experiences*/
+
+.mes_experiences
+{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: flex;  
+    justify-content: space-between;
+    margin-right: 20px; 
+}
+
+.experiences
+{
+    font-size: 18px;
+    text-align: initial;
+}
+.experiences h5
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.experiences p
+{
+    font-style: italic;
+}
+
+.images_experiences
+{
+    order: -1;
+    width: 560px;
+}
+
+/* soft skills */
+
+.mes_soft_skills
+{
+    grid-column: 1/3;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 18px;
+}
+
+.soft_skills h5
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.soft_skills
+{
+    font-size: 18px;
+    text-align: initial;
+}
+
+.logo_google, .logo_office
+{
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+
+.logo_office
+{
+    width: 190px;
+}
+.images_soft_skills
+{
+    display: flex;
+    margin-right: 180px;
+}
+
+
+/* intérêts*/
+
+.mes_interets
+{
+    grid-column: 1/3;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px; 
+}
+
+.interets
+{
+    font-size: 18px;
+    height: 200px;
+    margin-top: 18px;
+    text-align: initial;
+}
+.interets h5
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.interets p
+{
+    font-style: italic;
+}
+.images_interets
+{
+    order: -1;
+    background-image: url(../assets/images/soleil.webp);
+    background-size: 200px;
+    margin-left: 180px;
+    margin-top: 18px;
+
+}
+
+
+/*fin du site*/
+
+.fin 
+{
+    font-size: 15px;
+    font-style: italic;
+}
+
